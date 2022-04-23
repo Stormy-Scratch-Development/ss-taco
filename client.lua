@@ -6,6 +6,8 @@ local onDuty = true
 
 local spawnedPeds = {}
 
+PlayerJob = {}
+
 
 
 ----------------
@@ -14,12 +16,9 @@ local spawnedPeds = {}
 
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
 AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
-    PlayerJob = PlayerData.job
-	if PlayerData.job.onduty then
-	    if PlayerData.job.name == "taco" then
-		TriggerServerEvent("QBCore:ToggleDuty")
-	    end
-	end
+	QBCore.Functions.GetPlayerData(function(PlayerData)
+		PlayerJob = PlayerData.job
+	end)
 end)
 
 RegisterNetEvent('QBCore:Client:SetDuty')
