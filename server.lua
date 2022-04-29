@@ -14,3 +14,21 @@ QBCore.Functions.CreateCallback('ss-taco:server:get:Taco', function(source, cb)
         cb(false)
     end
 end)
+
+--Food
+QBCore.Functions.CreateUseableItem("taco", function(source, item)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
+        TriggerClientEvent("consumables:client:Eat", src, item.name)
+    end
+end)
+
+--Drinks
+QBCore.Functions.CreateUseableItem("taco-shake", function(source, item)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
+        TriggerClientEvent("consumables:client:Drink", src, item.name)
+    end
+end)
