@@ -57,27 +57,6 @@ ss-taco job script by Stormy Scratch
 
 drag and drop the image from ss-taco/images to qb-inventory\html\images
 
-
-## Insert into #qb-smallresources --> server --> consumables.lua
-
---Taco
-
---Food
-QBCore.Functions.CreateUseableItem("taco", function(source, item)
-    local Player = QBCore.Functions.GetPlayer(source)
-	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
-        TriggerClientEvent("consumables:client:Eat", source, item.name)
-    end
-end)
-
---Drinks
-QBCore.Functions.CreateUseableItem("taco-shake", function(source, item)
-    local Player = QBCore.Functions.GetPlayer(source)
-	if Player.Functions.RemoveItem(item.name, 1, item.slot) then
-        TriggerClientEvent("consumables:client:Drink", source, item.name)
-    end
-end)
-
 ## Insert into #qb-smallresources --> config.lua
 
 Consumeables = {
