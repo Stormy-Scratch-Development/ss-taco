@@ -8,6 +8,8 @@ qb-target - https://github.com/BerkieBb/qb-target / https://github.com/loljoshie
 
 qb-menu - https://github.com/QBCore-framework/qb-menu / https://github.com/loljoshie/qb-menu
 
+qb-management - https://github.com/QBCore-framework/qb-management
+
 taco mlo - https://www.gta5-mods.com/maps/taco-restaurant-mlo-add-on-fivem-pablitomamutopaputo
 
 ## Credits : 
