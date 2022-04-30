@@ -394,7 +394,7 @@ Citizen.CreateThread(function()
     exports["qb-target"]:AddBoxZone("BossMenu", vector3(8.19, -1607.3, 29.37), 0.5, 0.5, {
 		name="BossMenu",
 		heading=0,
-		debugPoly=true,
+		debugPoly=false,
 		minZ=29.5,
 		maxZ=30.0,
 	}, {
