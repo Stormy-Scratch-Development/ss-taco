@@ -390,6 +390,28 @@ Citizen.CreateThread(function()
 		},
 		distance = 1.5
 	})
+		
+    exports["qb-target"]:AddBoxZone("BossMenu", vector3(8.19, -1607.3, 29.37), 0.5, 0.5, {
+		name="BossMenu",
+		heading=0,
+		debugPoly=true,
+		minZ=29.5,
+		maxZ=30.0,
+	}, {
+        options = {
+            {
+              event = "qb-bossmenu:client:OpenMenu",
+              icon = "fas fa-th-list",
+              label = "Access Boss Menu",
+              type = "client",
+              job = "taco",
+              canInteract = function()
+                  return QBCore.PlayerData.job.isboss
+              end,
+            },
+        },
+        distance = 2.5
+    })
 
     exports['qb-target']:AddBoxZone("tacofridge", vector3(17.03, -1599.7, 29.38), 0.7, 1, {
         name="tacofridge",
